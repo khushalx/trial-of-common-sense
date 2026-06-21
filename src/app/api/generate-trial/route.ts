@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { getFallbackTrial } from "@/lib/fallbackTrial";
 import { TRIAL_SYSTEM_PROMPT } from "@/lib/trialPrompt";
 import type { TrialGenerationResponse, TrialScript } from "@/lib/trialTypes";
-import { isTrialScript } from "@/lib/trialValidation";
+import { normalizeTrial } from "@/src/lib/validateTrial";
 
 const GROQ_ENDPOINT = "https://api.groq.com/openai/v1/chat/completions";
 const MAX_TOPIC_LENGTH = 120;
@@ -50,6 +50,8 @@ export async function POST(request: Request) {
     );
   }
 
+  console.log("Generating trial for topic:", topic);
+
   const apiKey = process.env.GROQ_API_KEY;
   if (!apiKey) {
     console.error("[generate-trial] Missing GROQ_API_KEY in .env.local.");
@@ -77,6 +79,8 @@ export async function POST(request: Request) {
       cache: "no-store",
     });
 
+    console.log("Groq status:", groqResponse.status);
+
     const rawGroqResponse = await groqResponse.text();
     console.error("[generate-trial] Raw Groq response:", rawGroqResponse);
 
@@ -97,6 +101,7 @@ export async function POST(request: Request) {
     }
 
     const content = data.choices?.[0]?.message?.content;
+    console.log("Groq content preview:", content?.slice(0, 300));
     if (!content) return fallbackResponse(topic, "Groq returned no message content");
 
     let parsed: unknown;
@@ -108,12 +113,14 @@ export async function POST(request: Request) {
       return fallbackResponse(topic, "Groq returned malformed JSON");
     }
 
-    if (!isTrialScript(parsed)) {
-      return fallbackResponse(topic, "Groq JSON did not match the TrialScript schema");
+    const validation = normalizeTrial(parsed, topic);
+    if (!validation.valid) {
+      console.warn("Validation failed:", validation.reason);
+      return fallbackResponse(topic, validation.reason);
     }
 
     const trial: TrialScript = {
-      ...parsed,
+      ...validation.trial,
       topic,
       isFallback: false,
     };
