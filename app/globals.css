@@ -194,6 +194,71 @@ button {
 .secondary-court-button:hover { background: #2a1a12; color: #eee0c1; }
 .gavel-button:active, .secondary-court-button:active, .new-trial-button:active { transform: translateY(2px); }
 
+/* Complete landing experience */
+.landing-page { background: #100b08; }
+.lobby-hero { position: relative; min-height: 100vh; display: flex; align-items: center; justify-content: center; overflow: hidden; background: radial-gradient(ellipse at 50% 23%, rgba(151,105,52,.2), transparent 47%), linear-gradient(180deg, #2a1912 0%, #100b08 100%); }
+.lobby-hero::after { content: ""; position: absolute; z-index: 2; left: 0; right: 0; bottom: 0; height: 160px; pointer-events: none; background: linear-gradient(180deg, transparent, #100b08); }
+.lobby-hero-content { position: relative; z-index: 10; width: min(940px, calc(100% - 40px)); margin: 0 auto; padding: 78px 24px 74px; display: flex; flex-direction: column; align-items: center; text-align: center; }
+.lobby-court-label { margin: 0 0 18px; color: #b09159; font-size: 10px; font-weight: 700; letter-spacing: .4em; text-transform: uppercase; }
+.lobby-hero .lobby-title { max-width: 880px; color: #f1e7ce; font-size: clamp(3.8rem, 8vw, 7rem); line-height: .92; }
+.lobby-tagline { max-width: 590px; margin: 25px auto 0; color: #c8bca5; font: italic clamp(16px, 2vw, 21px)/1.5 Georgia, serif; }
+.hero-case-form { width: min(680px, 100%); margin-top: 38px; }
+.case-entry input { position: relative; z-index: 1; width: 100%; border: 0; background: transparent; padding: 36px 20px 18px; color: #1d1814; text-align: center; outline: none; font: 19px Georgia, serif; }
+.case-entry input::placeholder { color: #786f60; }
+.case-entry-error-message { height: 19px; margin: 7px 0 0; color: #d28b7e; font-size: 10px; letter-spacing: .04em; transition: opacity .2s; }
+.hero-actions { margin-top: 8px; display: flex; align-items: stretch; justify-content: center; gap: 10px; }
+.gavel-button-mark { display: inline-block; margin-right: 10px; transition: transform .15s; }
+.gavel-button:active .gavel-button-mark { transform: rotate(-18deg); }
+.example-case-files { width: min(840px, 100%); margin-top: 33px; padding-top: 15px; border-top: 1px solid rgba(169,136,72,.23); }
+.example-case-files > p { margin: 0 0 10px; color: #766b5b; font-size: 7px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; }
+.example-case-files > div { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
+.example-case-files button { min-width: 0; min-height: 39px; display: flex; align-items: center; gap: 9px; border: 1px solid rgba(135,105,61,.29); border-left: 2px solid #694929; background: rgba(24,15,10,.72); padding: 8px 10px; color: #aa9c85; text-align: left; font: 11px/1.25 Georgia, serif; transition: border-color .2s, color .2s, background .2s, transform .2s; }
+.example-case-files button:hover { border-color: #88683a; background: #281810; color: #e1d2b5; transform: translateY(-1px); }
+.example-case-files button span { flex: 0 0 auto; color: #795e38; font: 7px "Courier New", monospace; }
+
+.landing-sections { position: relative; z-index: 3; width: min(1180px, calc(100% - 40px)); margin: 0 auto; padding: 34px 0 0; }
+.landing-sections .case-files { width: min(920px, 100%); margin: 0 auto 68px; }
+.landing-section { padding: 76px 0; border-top: 1px solid rgba(159,126,70,.22); }
+.landing-section-heading { margin-bottom: 31px; text-align: center; }
+.landing-section-heading > p, .difference-label, .final-case-cta > p { margin: 0 0 8px; color: #917950; font-size: 8px; font-weight: 700; letter-spacing: .25em; text-transform: uppercase; }
+.landing-section-heading h2, .difference-statement h2, .final-case-cta h2 { margin: 0; color: #e1d2b5; font: 34px/1.18 Georgia, serif; }
+
+.legal-process-board { position: relative; display: grid; grid-template-columns: repeat(4, 1fr); gap: 11px; }
+.legal-process-board::before { content: ""; position: absolute; left: 7%; right: 7%; top: 36px; height: 2px; background: #6d2b26; opacity: .7; }
+.legal-process-board article { position: relative; min-height: 155px; padding: 24px 19px 19px; border: 1px solid #5b4028; background: #21140e; box-shadow: inset 0 0 0 5px #17100c; text-align: center; }
+.legal-process-board article > span { position: relative; z-index: 1; width: 27px; height: 27px; margin: 0 auto 19px; display: grid; place-items: center; border: 1px solid #8c6b3d; border-radius: 50%; background: #1b110c; color: #b39559; font: 8px "Courier New", monospace; }
+.legal-process-board h3 { margin: 0 0 9px; color: #d4c4a6; font: 17px Georgia, serif; }
+.legal-process-board p { margin: 0; color: #817665; font: italic 11px/1.45 Georgia, serif; }
+
+.landing-character-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 11px; }
+.landing-character { min-height: 235px; padding: 25px 20px 21px; border: 1px solid #5d4028; background: linear-gradient(145deg, #2d1b13, #180f0b); text-align: center; box-shadow: inset 0 0 0 6px rgba(11,7,5,.42); }
+.character-mark { width: 62px; height: 62px; margin: 0 auto 19px; display: grid; place-items: center; border: 1px solid #876940; border-radius: 50%; background: #17100c; color: #bd9d61; font: 700 13px Georgia, serif; }
+.character-www .character-mark { border-radius: 3px; font-family: "Courier New", monospace; }
+.landing-character h3 { margin: 0 0 7px; color: #dacaaa; font: 20px Georgia, serif; }
+.landing-character > span { color: #9c8154; font-size: 7px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; }
+.landing-character p { margin: 17px auto 0; max-width: 220px; color: #807463; font: italic 11px/1.5 Georgia, serif; }
+
+.difference-section { display: grid; grid-template-columns: .88fr 1.12fr; align-items: center; gap: clamp(35px, 8vw, 100px); }
+.difference-statement { padding-left: 22px; border-left: 3px solid #74452a; }
+.difference-statement > p:last-child { max-width: 420px; margin: 18px 0 0; color: #928573; font: 14px/1.65 Georgia, serif; }
+.difference-record { border: 1px solid #5c4028; background: #1b110d; }
+.difference-record article { position: relative; min-height: 116px; padding: 22px 24px 20px 112px; }
+.difference-record article + article { border-top: 1px solid #4a3323; }
+.difference-record article > span { position: absolute; left: 21px; top: 25px; width: 64px; border: 1px solid #6d5130; padding: 5px; color: #95784a; text-align: center; font-size: 7px; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; transform: rotate(-2deg); }
+.difference-record h3 { margin: 0 0 6px; color: #d0bfa0; font: 18px Georgia, serif; }
+.difference-record p { margin: 0; color: #817565; font: 12px/1.5 Georgia, serif; }
+
+.final-case-cta { margin: 42px 0 78px; padding: 48px clamp(20px, 6vw, 75px); border: 1px solid #72502e; background: radial-gradient(circle at 50% 0, rgba(151,109,55,.12), transparent 45%), #21140e; text-align: center; box-shadow: inset 0 0 0 7px #160e0a; }
+.final-cta-seal { width: 54px; height: 54px; margin: 0 auto 17px; display: grid; place-items: center; border: 1px solid #83683c; border-radius: 50%; color: #aa8a51; font: 27px Georgia, serif; }
+.final-case-cta form { width: min(690px, 100%); margin: 27px auto 0; display: grid; grid-template-columns: 1fr auto; }
+.final-case-cta input { min-width: 0; border: 1px solid #927746; border-right: 0; background: #dfd2b6; padding: 15px 17px; color: #261e18; outline: none; font: 16px Georgia, serif; }
+.final-case-cta input:focus { border-color: #c2a768; }
+.final-case-cta button { border: 1px solid #a98246; background: #76271f; padding: 0 23px; color: #f0dfbe; font-size: 9px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
+.landing-footer { min-height: 70px; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 20px; border-top: 1px solid rgba(150,117,64,.25); color: #695e50; }
+.landing-footer span { font-size: 7px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
+.landing-footer span:last-child { text-align: right; }
+.landing-footer p { margin: 0; font: italic 11px Georgia, serif; }
+
 /* Trial architecture */
 .trial-shell {
   position: relative;
@@ -488,6 +553,11 @@ button {
 }
 
 @media (max-width: 900px) {
+  .example-case-files > div { grid-template-columns: 1fr 1fr; }
+  .legal-process-board, .landing-character-grid { grid-template-columns: 1fr 1fr; }
+  .legal-process-board::before { display: none; }
+  .difference-section { grid-template-columns: 1fr; gap: 32px; }
+  .difference-statement { max-width: 640px; }
   .trial-topbar { grid-template-columns: 1fr auto; }
   .trial-topic { grid-column: 1 / -1; grid-row: 2; }
   .phase-indicator p { display: none; }
@@ -503,6 +573,33 @@ button {
   .court-column { width: 54px; }
   .court-doors { width: calc(100vw - 70px); }
   .lobby-title { font-size: clamp(3.2rem, 15vw, 5rem); }
+  .lobby-hero-content { width: calc(100% - 24px); padding: 72px 0 58px; }
+  .lobby-hero .lobby-title { font-size: clamp(3.1rem, 15vw, 5rem); }
+  .lobby-court-label { max-width: 250px; font-size: 8px; line-height: 1.6; }
+  .lobby-tagline { margin-top: 19px; font-size: 16px; }
+  .hero-case-form { margin-top: 29px; }
+  .case-entry input { padding-inline: 13px; font-size: 16px; }
+  .hero-actions { flex-direction: column; }
+  .hero-actions button { width: 100%; }
+  .example-case-files { margin-top: 27px; }
+  .example-case-files > div, .legal-process-board, .landing-character-grid { grid-template-columns: 1fr; }
+  .example-case-files button { min-height: 44px; }
+  .landing-sections { width: calc(100% - 24px); padding-top: 20px; }
+  .landing-sections .case-files { margin-bottom: 50px; }
+  .landing-section { padding: 55px 0; }
+  .landing-section-heading { margin-bottom: 23px; }
+  .landing-section-heading h2, .difference-statement h2, .final-case-cta h2 { font-size: 28px; }
+  .legal-process-board article { min-height: 130px; }
+  .landing-character { min-height: 210px; }
+  .difference-statement { padding-left: 15px; }
+  .difference-record article { padding: 67px 17px 19px; }
+  .difference-record article > span { left: 17px; top: 20px; }
+  .final-case-cta { margin: 25px 0 52px; padding: 36px 15px; }
+  .final-case-cta form { grid-template-columns: 1fr; gap: 8px; }
+  .final-case-cta input { min-height: 48px; border-right: 1px solid #927746; }
+  .final-case-cta button { min-height: 48px; }
+  .landing-footer { grid-template-columns: 1fr; gap: 8px; padding: 20px 0 28px; text-align: center; }
+  .landing-footer span:last-child { text-align: center; }
   .trial-shell { padding-bottom: 14px; }
   .trial-topbar { grid-template-columns: 1fr; padding: 10px 12px; gap: 8px; }
   .trial-court-name { font-size: 9px; }
