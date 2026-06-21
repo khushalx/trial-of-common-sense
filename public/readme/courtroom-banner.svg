@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="560" viewBox="0 0 1400 560" role="img" aria-labelledby="title desc">
+  <title id="title">The Trial of Common Sense</title>
+  <desc id="desc">A dark Victorian courtroom banner with mahogany wood, brass ornament, and a red guilty stamp.</desc>
+  <defs>
+    <linearGradient id="wood" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#130b08"/>
+      <stop offset="0.18" stop-color="#321a11"/>
+      <stop offset="0.5" stop-color="#1e100b"/>
+      <stop offset="0.82" stop-color="#321a11"/>
+      <stop offset="1" stop-color="#130b08"/>
+    </linearGradient>
+    <radialGradient id="light" cx="50%" cy="22%" r="72%">
+      <stop offset="0" stop-color="#a47c43" stop-opacity="0.28"/>
+      <stop offset="0.44" stop-color="#4d2b19" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#080504" stop-opacity="0.68"/>
+    </radialGradient>
+    <linearGradient id="bench" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4b2818"/>
+      <stop offset="1" stop-color="#1c0e09"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="180%">
+      <feDropShadow dx="0" dy="12" stdDeviation="13" flood-color="#000" flood-opacity="0.68"/>
+    </filter>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" seed="17"/>
+      <feColorMatrix values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 .055 0"/>
+    </filter>
+  </defs>
+
+  <rect width="1400" height="560" fill="url(#wood)"/>
+  <rect width="1400" height="560" fill="url(#light)"/>
+  <rect width="1400" height="560" filter="url(#grain)" opacity="0.5"/>
+
+  <!-- Courtroom architecture -->
+  <g opacity="0.65">
+    <path d="M40 0h152v560H40z" fill="#170c08"/>
+    <path d="M55 44h122v456H55z" fill="#2b170f" stroke="#765329" stroke-opacity="0.34"/>
+    <path d="M18 28h196v38H18zM18 494h196v38H18z" fill="#25130d" stroke="#80613a" stroke-opacity="0.25"/>
+    <path d="M1208 0h152v560h-152z" fill="#170c08"/>
+    <path d="M1223 44h122v456h-122z" fill="#2b170f" stroke="#765329" stroke-opacity="0.34"/>
+    <path d="M1186 28h196v38h-196zM1186 494h196v38h-196z" fill="#25130d" stroke="#80613a" stroke-opacity="0.25"/>
+  </g>
+
+  <g filter="url(#shadow)">
+    <path d="M250 400h900v116H250z" fill="url(#bench)" stroke="#7e542d" stroke-width="2"/>
+    <path d="M220 388h960v30H220z" fill="#1a0c08" stroke="#9d7440" stroke-opacity="0.45"/>
+    <path d="M670 335h60v68h-60z" fill="#090605"/>
+    <circle cx="700" cy="310" r="28" fill="#0a0605"/>
+    <path d="M648 405q18-74 52-74t52 74" fill="#0b0705"/>
+  </g>
+
+  <!-- Seal -->
+  <g transform="translate(700 78)">
+    <circle r="48" fill="#20110b" stroke="#b08c4c" stroke-width="2"/>
+    <circle r="39" fill="none" stroke="#765c34"/>
+    <text y="14" text-anchor="middle" fill="#c7a768" font-family="Georgia,serif" font-size="42">§</text>
+  </g>
+
+  <g text-anchor="middle" filter="url(#shadow)">
+    <text x="700" y="167" fill="#af9057" font-family="Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="7">THE COURT OF PUBLIC OPINION</text>
+    <path d="M430 188h540" stroke="#8f6d39" stroke-width="1"/>
+    <circle cx="414" cy="188" r="3" fill="#a8874d"/>
+    <circle cx="986" cy="188" r="3" fill="#a8874d"/>
+    <text x="700" y="270" fill="#f0e3c5" font-family="Georgia,'Times New Roman',serif" font-size="70" letter-spacing="-2">The Trial of Common Sense</text>
+    <text x="700" y="316" fill="#c3b69f" font-family="Georgia,'Times New Roman',serif" font-size="23" font-style="italic">Any topic goes on trial. Common sense always loses.</text>
+  </g>
+
+  <!-- Verdict stamp -->
+  <g transform="translate(1090 365) rotate(-8)" opacity="0.92">
+    <rect x="-111" y="-39" width="222" height="78" rx="3" fill="none" stroke="#a33d35" stroke-width="5"/>
+    <rect x="-103" y="-31" width="206" height="62" fill="none" stroke="#a33d35" stroke-width="2"/>
+    <text y="18" text-anchor="middle" fill="#b74c42" font-family="Georgia,serif" font-size="49" font-weight="700" letter-spacing="7">GUILTY</text>
+  </g>
+
+  <text x="700" y="480" text-anchor="middle" fill="#8e7653" font-family="Arial,sans-serif" font-size="11" font-weight="700" letter-spacing="4">CASE NO. 0047-∞ · ALL RULINGS FINAL · REASON NOT ADMITTED</text>
+  <rect x="12" y="12" width="1376" height="536" fill="none" stroke="#9a7942" stroke-opacity="0.42"/>
+  <rect x="20" y="20" width="1360" height="520" fill="none" stroke="#5c4328" stroke-opacity="0.65"/>
+</svg>

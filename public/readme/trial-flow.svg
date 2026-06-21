@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="620" viewBox="0 0 1400 620" role="img" aria-labelledby="title desc">
+  <title id="title">Trial flow</title>
+  <desc id="desc">Seven court evidence cards connected by red string, from topic entry to a guilty verdict.</desc>
+  <defs>
+    <linearGradient id="board" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2c231b"/>
+      <stop offset="1" stop-color="#18110d"/>
+    </linearGradient>
+    <linearGradient id="sheet" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#eadfca"/>
+      <stop offset="1" stop-color="#cbbd9f"/>
+    </linearGradient>
+    <filter id="cardShadow" x="-25%" y="-25%" width="150%" height="170%">
+      <feDropShadow dx="2" dy="8" stdDeviation="7" flood-color="#000" flood-opacity="0.52"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0 0l7 3-7 3z" fill="#8f332d"/>
+    </marker>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.7" numOctaves="3" seed="5"/>
+      <feColorMatrix values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 .06 0"/>
+    </filter>
+  </defs>
+
+  <rect width="1400" height="620" fill="url(#board)"/>
+  <rect width="1400" height="620" filter="url(#grain)" opacity="0.45"/>
+  <rect x="20" y="20" width="1360" height="580" fill="none" stroke="#745236" stroke-width="10"/>
+  <rect x="31" y="31" width="1338" height="558" fill="none" stroke="#9a7347" stroke-opacity="0.38"/>
+
+  <text x="700" y="76" text-anchor="middle" fill="#d9c69e" font-family="Georgia,serif" font-size="31">Proceedings of the Court</text>
+  <text x="700" y="103" text-anchor="middle" fill="#897a65" font-family="Arial,sans-serif" font-size="10" font-weight="700" letter-spacing="4">CHAIN OF CUSTODY · FROM CONTROVERSY TO CONVICTION</text>
+
+  <!-- Red evidence string -->
+  <path d="M127 310C205 180 276 190 349 310S493 434 569 310 713 183 789 310 934 435 1009 310 1150 187 1276 310" fill="none" stroke="#8f332d" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow)" opacity="0.9"/>
+  <path d="M127 310C205 180 276 190 349 310S493 434 569 310 713 183 789 310 934 435 1009 310 1150 187 1276 310" fill="none" stroke="#c65a4f" stroke-width="1" opacity="0.45"/>
+
+  <!-- Cards -->
+  <g filter="url(#cardShadow)" font-family="Georgia,serif">
+    <g transform="translate(46 196) rotate(-2)">
+      <rect width="164" height="190" fill="url(#sheet)"/>
+      <circle cx="82" cy="11" r="6" fill="#79332b"/>
+      <text x="17" y="48" fill="#866f4c" font-family="Arial,sans-serif" font-size="9" font-weight="700" letter-spacing="2">01 · INTAKE</text>
+      <path d="M17 60h130" stroke="#9c8c70"/>
+      <text x="82" y="97" text-anchor="middle" fill="#30291f" font-size="18">Topic</text>
+      <text x="82" y="121" text-anchor="middle" fill="#30291f" font-size="18">Entered</text>
+      <text x="82" y="159" text-anchor="middle" fill="#746953" font-size="10" font-style="italic">Controversy filed</text>
+    </g>
+    <g transform="translate(266 135) rotate(2)">
+      <rect width="164" height="190" fill="url(#sheet)"/>
+      <circle cx="82" cy="11" r="6" fill="#79332b"/>
+      <text x="17" y="48" fill="#866f4c" font-family="Arial,sans-serif" font-size="9" font-weight="700" letter-spacing="2">02 · DRAFT</text>
+      <path d="M17 60h130" stroke="#9c8c70"/>
+      <text x="82" y="93" text-anchor="middle" fill="#30291f" font-size="17">Groq Writes</text>
+      <text x="82" y="117" text-anchor="middle" fill="#30291f" font-size="17">Case File</text>
+      <text x="82" y="159" text-anchor="middle" fill="#746953" font-size="10" font-style="italic">Facts become flexible</text>
+    </g>
+    <g transform="translate(486 256) rotate(-1)">
+      <rect width="164" height="190" fill="url(#sheet)"/>
+      <circle cx="82" cy="11" r="6" fill="#79332b"/>
+      <text x="17" y="48" fill="#866f4c" font-family="Arial,sans-serif" font-size="9" font-weight="700" letter-spacing="2">03 · ORDER</text>
+      <path d="M17 60h130" stroke="#9c8c70"/>
+      <text x="82" y="102" text-anchor="middle" fill="#30291f" font-size="19">Court Opens</text>
+      <text x="82" y="159" text-anchor="middle" fill="#746953" font-size="10" font-style="italic">Three gavel bangs</text>
+    </g>
+    <g transform="translate(706 135) rotate(1.5)">
+      <rect width="164" height="190" fill="url(#sheet)"/>
+      <circle cx="82" cy="11" r="6" fill="#79332b"/>
+      <text x="17" y="48" fill="#866f4c" font-family="Arial,sans-serif" font-size="9" font-weight="700" letter-spacing="2">04 · DEFENSE</text>
+      <path d="M17 60h130" stroke="#9c8c70"/>
+      <text x="82" y="102" text-anchor="middle" fill="#30291f" font-size="18">Player Objects</text>
+      <text x="82" y="159" text-anchor="middle" fill="#746953" font-size="10" font-style="italic">Reason is attempted</text>
+    </g>
+    <g transform="translate(926 256) rotate(-2)">
+      <rect width="164" height="190" fill="url(#sheet)"/>
+      <circle cx="82" cy="11" r="6" fill="#79332b"/>
+      <text x="17" y="48" fill="#866f4c" font-family="Arial,sans-serif" font-size="9" font-weight="700" letter-spacing="2">05 · RULING</text>
+      <path d="M17 60h130" stroke="#9c8c70"/>
+      <text x="82" y="93" text-anchor="middle" fill="#30291f" font-size="18">Judge</text>
+      <text x="82" y="117" text-anchor="middle" fill="#30291f" font-size="18">Overrules</text>
+      <text x="82" y="159" text-anchor="middle" fill="#746953" font-size="10" font-style="italic">Naturally</text>
+    </g>
+    <g transform="translate(1146 135) rotate(2)">
+      <rect width="164" height="190" fill="url(#sheet)"/>
+      <circle cx="82" cy="11" r="6" fill="#79332b"/>
+      <text x="17" y="48" fill="#866f4c" font-family="Arial,sans-serif" font-size="9" font-weight="700" letter-spacing="2">06 · JURY</text>
+      <path d="M17 60h130" stroke="#9c8c70"/>
+      <text x="82" y="102" text-anchor="middle" fill="#30291f" font-size="19">Jury Votes</text>
+      <text x="82" y="159" text-anchor="middle" fill="#746953" font-size="10" font-style="italic">12–0 against sense</text>
+    </g>
+  </g>
+
+  <g transform="translate(1140 420) rotate(-4)" filter="url(#cardShadow)">
+    <rect width="190" height="120" fill="#641e1a" stroke="#b65b4f" stroke-width="3"/>
+    <circle cx="95" cy="10" r="6" fill="#c09361"/>
+    <text x="95" y="43" text-anchor="middle" fill="#d4aa79" font-family="Arial,sans-serif" font-size="9" font-weight="700" letter-spacing="3">07 · VERDICT</text>
+    <text x="95" y="88" text-anchor="middle" fill="#f2dfbd" font-family="Georgia,serif" font-size="30" font-weight="700" letter-spacing="4">GUILTY</text>
+  </g>
+  <path d="M1268 330v78" stroke="#8f332d" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <text x="70" y="563" fill="#7f705c" font-family="Georgia,serif" font-size="12" font-style="italic">Evidence may be questioned. The outcome may not.</text>
+</svg>
